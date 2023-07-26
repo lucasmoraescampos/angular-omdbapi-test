@@ -1,0 +1,48 @@
+.movies-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+
+    .poster {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .movie-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        p {
+            text-align: justify;
+        }
+
+        .btn-favorite {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .movies-content {
+        flex-direction: row-reverse;
+
+        .poster {
+            width: 40%;
+        }
+
+        .movie-info {
+            width: 60%;
+
+            .btn-favorite {
+                width: 150px;
+                margin-top: 0;
+            }
+        }
+    }
+}

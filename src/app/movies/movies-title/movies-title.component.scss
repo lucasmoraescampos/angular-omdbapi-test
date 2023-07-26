@@ -1,0 +1,23 @@
+.movies-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    h4 {
+        text-align: center;
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
+@media (min-width: 768px) {
+    .movies-title {
+        text-align: center;
+
+        p {
+            text-align: center;
+        }
+    }
+}

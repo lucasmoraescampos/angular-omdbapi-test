@@ -1,0 +1,24 @@
+.app-item {
+    list-style-type: none;
+    display: flex;
+    transition: 0.2s;
+
+    &.button {
+        cursor: pointer;
+
+        &:hover {
+            background-color: #f1f2f7;
+        }
+    }
+
+    &:not(:first-child) {
+        border-top: 1px solid #f1f2f7;
+    }
+
+    .spinner-border {
+        margin-right: 15px;
+        width: 25px;
+        height: 25px;
+        border-width: 3px;
+    }
+}

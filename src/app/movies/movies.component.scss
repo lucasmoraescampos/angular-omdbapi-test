@@ -1,0 +1,12 @@
+.movies-container {
+    position: relative;
+    padding: 20px;
+    min-height: calc(100vh - 128px);
+}
+
+@media (min-width: 768px) {
+    .movies-container {
+        width: 768px;
+        margin: 20px auto 0;
+    }
+}

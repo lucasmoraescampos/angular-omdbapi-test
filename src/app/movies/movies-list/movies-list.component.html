@@ -1,0 +1,12 @@
+<app-list>
+    <app-item [button]="true" [loading]="loading[i]" (click)="selectMovie(i)" *ngFor="let item of list; let i=index">
+        <div class="movie-item">
+            <img class="float-left" [src]="item.poster" height="80px">
+            <div class="d-flex justify-content-center flex-column">
+                <p class="title">{{ item.title }}</p>
+                <p class="year">{{ item.year }}</p>
+                <p class="type">{{ item.type }}</p>
+            </div>
+        </div>
+    </app-item>
+</app-list>

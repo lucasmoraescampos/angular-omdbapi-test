@@ -1,0 +1,22 @@
+<app-list>
+    <app-item [button]="true" [loading]="loading[i]" (click)="openMovie(i)" *ngFor="let item of favorites; let i=index">
+        <div class="favorites-item">
+            <img class="float-left" [src]="item.poster" height="80px">
+            <div class="d-flex justify-content-center flex-column">
+                <p class="title">{{ item.title }}</p>
+                <p class="year">{{ item.year }}</p>
+                <p class="type">{{ item.type }}</p>
+            </div>
+            <div class="my-auto ms-auto me-0" *ngIf="loading[i] == false">
+                <app-button [circle]="true" [outline]="true" (click)="remove(item.id)">
+                    <i class="fa-solid fa-xmark"></i>
+                </app-button>
+            </div>
+        </div>
+    </app-item>
+    <app-item *ngIf="favorites.length == 0">
+        <div class="d-flex justify-content-center w-100 p-3 text-center">
+            <p class="m-0">No favorite movies</p>
+        </div>
+    </app-item>
+</app-list>

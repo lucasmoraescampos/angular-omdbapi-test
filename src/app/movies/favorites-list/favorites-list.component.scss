@@ -1,0 +1,27 @@
+.favorites-item {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    padding: 15px;
+
+    img {
+        border-radius: 2px;
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.225rem;
+        margin-bottom: 4px;
+    }
+
+    .year {
+        font-size: 0.7rem;
+        margin: 0;
+    }
+
+    .type {
+        font-size: 0.75rem;
+        margin: 0;
+    }
+}

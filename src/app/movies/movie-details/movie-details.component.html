@@ -1,0 +1,37 @@
+<div class="movies-content" *ngIf="movie">
+    <div class="poster">
+        <img class="img-thumbnail" [src]="movie.poster">
+    </div>
+    <div class="movie-info">
+        <h4>{{ movie.title }}</h4>
+        <p>{{ movie.plot }}</p>
+        
+        <app-list>
+            <app-item>
+                <b class="me-3">Actors</b>
+                <span>{{ movie.actors }}</span>
+            </app-item>
+            <app-item>
+                <b class="me-3">Review</b>
+                <app-stars-rating [value]="movie.rating ?? 0"></app-stars-rating>
+            </app-item>
+        </app-list>
+
+        <app-button class="btn-favorite"
+            [block]="true" 
+            (click)="favorite()"
+            *ngIf="!isFavorite">
+            Favorite 
+            <i class="fa-regular fa-heart"></i>
+        </app-button>
+
+        <app-button class="btn-favorite"
+            [block]="true"
+            [outline]="true"
+            (click)="removeFavorite()"
+            *ngIf="isFavorite">
+            Remove Favorite 
+            <i class="fa-regular fa-heart"></i>
+        </app-button>
+    </div>
+</div>

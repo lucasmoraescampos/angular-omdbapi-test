@@ -1,0 +1,37 @@
+<app-header>
+    <div end>
+        <app-button color="light" (click)="openFavorites()">
+            <i class="fa-regular fa-heart"></i>
+            Favorites
+        </app-button>
+    </div>
+</app-header>
+
+<main>
+    <div class="movies-container">
+        <section>
+            <movies-title></movies-title>
+        </section>
+
+        <section>
+            <movies-searchbar></movies-searchbar>
+        </section>
+
+        <section>
+            <movie-details [movie]="selectedMovie"></movie-details>
+        </section>
+    </div>
+
+    <app-offcanvas [title]="searched">
+        <movies-list [list]="moviesList"></movies-list>
+    </app-offcanvas>
+
+    <app-modal>
+        <div title>Favorites</div>
+        <div body>
+            <favorites-list></favorites-list>
+        </div>
+    </app-modal>
+</main>
+
+<app-footer></app-footer>

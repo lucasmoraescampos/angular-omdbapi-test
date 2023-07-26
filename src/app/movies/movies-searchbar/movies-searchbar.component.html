@@ -1,0 +1,8 @@
+<form class="movies-searchbar">
+    <input class="form-control" name="search" [(ngModel)]="value">
+    <app-button type="submit" [block]="true" (click)="search()">
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="loading"></span>
+        Search
+    </app-button>
+    <app-button type="button" [block]="true" (click)="reset()">Reset</app-button>
+</form>
