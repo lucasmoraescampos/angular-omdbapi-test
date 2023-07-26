@@ -1,4 +1,4 @@
-# Verions
+# Versions
 - Angular 16
 - Node 18
 
